@@ -10,7 +10,8 @@ public class DecoratorPatternExample {
 
         //Using a decorator to add floor
         System.out.println("Using a Floor decorator now.");
-        FloorDecorator floorDecorator = new FloorDecorator();
+        //FloorDecorator floorDecorator = new FloorDecorator();
+        AbstractDecorator floorDecorator = new FloorDecorator();
         floorDecorator.setTheComponent(withoutDecorator);
         floorDecorator.makeHouse();
         System.out.println("_____________________");
@@ -18,11 +19,13 @@ public class DecoratorPatternExample {
         //Using a decorator to add floor to original house and then
         //paint it.
         System.out.println("Using a Paint decorator now.");
-        PaintDecorator paintDecorator = new PaintDecorator();
+        //PaintDecorator paintDecorator = new PaintDecorator();
+        AbstractDecorator paintDecorator = new PaintDecorator();
         //Adding results from floor decorator
         paintDecorator.setTheComponent(floorDecorator);
         paintDecorator.makeHouse();
         System.out.println("_____________________");
+
 
     }
 

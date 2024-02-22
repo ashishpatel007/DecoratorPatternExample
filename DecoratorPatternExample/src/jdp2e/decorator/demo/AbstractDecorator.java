@@ -14,7 +14,7 @@ abstract class AbstractDecorator extends Component
         {
             // Delegation is simply passing a duty off to someone/something else.
             // With delegation an object receives a request and then "delegate" this
-            //  request to another object to handle.
+            //  request to another object to handle.    
             component.makeHouse();//Delegating the task
         }
 
